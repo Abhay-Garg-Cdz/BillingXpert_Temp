@@ -2,7 +2,7 @@ package com.billingxpert.DTO;
 
 public class Account {
 
-	private int uniqueIdAccount;
+	public static int uniqueIdAccount;
 	private String accountName;
 	private AccountGroup accountGroup;
 	private double openingBalance;

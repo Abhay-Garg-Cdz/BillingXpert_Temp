@@ -2,7 +2,7 @@ package com.billingxpert.DTO;
 
 public class ItemGroup {
 
-	private int uniqueIdItemGroup;
+	public static int uniqueIdItemGroup;
 	private String itemGroupName;
 
 	public ItemGroup() {

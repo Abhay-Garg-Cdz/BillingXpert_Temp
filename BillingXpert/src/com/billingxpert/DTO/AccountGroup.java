@@ -2,7 +2,7 @@ package com.billingxpert.DTO;
 
 public class AccountGroup {
   
-	private int uniqueIdAccountGroup;
+	public static int uniqueIdAccountGroup;
 	private String accountGroupName;
 
 	public AccountGroup() {

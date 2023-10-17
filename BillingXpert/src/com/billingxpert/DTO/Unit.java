@@ -2,7 +2,7 @@ package com.billingxpert.DTO;
 
 public class Unit {
 
-	private int uniqueIdUnit;
+	public static int uniqueIdUnit;
 	private String unitName;
 
 	public Unit() {
