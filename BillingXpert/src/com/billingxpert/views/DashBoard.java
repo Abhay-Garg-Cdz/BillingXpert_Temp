@@ -1,6 +1,5 @@
 package com.billingxpert.views;
 
-import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -29,14 +28,23 @@ public class DashBoard {
 	 */
 	private void initialize() {
 		frameDashBoard = new JFrame();
-		frameDashBoard.setBounds(100, 100, 1050, 500);
+		frameDashBoard.setResizable(false);
+		frameDashBoard.setBounds(100, 75, 1050, 750);
 		frameDashBoard.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frameDashBoard.getContentPane().setLayout(null);
 
-		NavBar panel = new NavBar();
-		panel.setBounds(0, 0, 1050, 45);
-		frameDashBoard.getContentPane().add(panel);
+		NavBar navbarPane = new NavBar();
+//		navbarPane.setBounds(0, 0, 1036, 50);
+		frameDashBoard.getContentPane().add(navbarPane);
+		navbarPane.setLayout(null);
+		
+		JPanel functionPanel = new UpdateAccountPanel();
+		functionPanel.setBounds(0, 51, 1036, 662);
+		frameDashBoard.getContentPane().add(functionPanel);
 		frameDashBoard.setVisible(true);
+		
+		
+		
 
 	}
 }
