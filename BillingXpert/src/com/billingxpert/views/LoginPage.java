@@ -33,7 +33,7 @@ public class LoginPage extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					LoginPage window = new LoginPage();
+					new LoginPage();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

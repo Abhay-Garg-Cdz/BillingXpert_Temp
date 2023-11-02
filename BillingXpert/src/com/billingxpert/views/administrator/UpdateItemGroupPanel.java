@@ -8,11 +8,10 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.LineBorder;
-import java.awt.Color;
 import javax.swing.JList;
 import javax.swing.UIManager;
 
-public class UpdateItemGroupPanel extends JPanel {
+public class UpdateItemGroupPanel<E> extends JPanel {
 
 	// bound -- 530*410
 
@@ -52,7 +51,7 @@ public class UpdateItemGroupPanel extends JPanel {
 		textField.setBounds(182, 178, 201, 33);
 		add(textField);
 
-		JList list = new JList();
+		JList<?> list = new JList<E>();
 		list.setBorder(UIManager.getBorder("List.focusCellHighlightBorder"));
 		list.setBounds(182, 110, 201, 40);
 		add(list);

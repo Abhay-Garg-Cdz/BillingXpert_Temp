@@ -11,7 +11,7 @@ import javax.swing.ListSelectionModel;
 import javax.swing.border.LineBorder;
 import java.awt.Color;
 
-public class UpdateAccountPanel extends JPanel {
+public class UpdateAccountPanel<E> extends JPanel {
 
 	/**
 	 * 
@@ -133,7 +133,7 @@ public class UpdateAccountPanel extends JPanel {
 		stateLabel.setBounds(30, 485, 80, 35);
 		add(stateLabel);
 
-		JList stateList = new JList();
+		JList<?> stateList = new JList<E>();
 		stateList.setBorder(new LineBorder(new Color(0, 0, 0)));
 		stateList.setBackground(SystemColor.text);
 		stateLabel.setLabelFor(stateList);

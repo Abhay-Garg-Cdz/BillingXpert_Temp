@@ -46,17 +46,17 @@ public class DashBoard extends JFrame {
 
 	}
 
-	public static void showPanel(int valueFromNavbar) {
+	public static <E> void showPanel(int valueFromNavbar) {
 		switch (valueFromNavbar) {
 
 		case 1: // Add Account
 			activityPanel.setVisible(false);
-			activityPanel = new AddAccountPanel();
+			activityPanel = new AddAccountPanel<E>();
 			activityPanel.setBounds(0, 51, 1030, 660);
 			break;
 		case 2: // Update Account
 			activityPanel.setVisible(false);
-			activityPanel = new UpdateAccountPanel();
+			activityPanel = new UpdateAccountPanel<E>();
 			activityPanel.setBounds(0, 51, 1030, 660);
 			break;
 
@@ -74,7 +74,7 @@ public class DashBoard extends JFrame {
 
 		case 5: // Update Account Group
 			activityPanel.setVisible(false);
-			activityPanel = new UpdateAccountGroupPanel();
+			activityPanel = new UpdateAccountGroupPanel<E>();
 			activityPanel.setBounds(0, 51, 470, 290);
 			break;
 
@@ -110,7 +110,7 @@ public class DashBoard extends JFrame {
 
 		case 11: // Update Item Group
 			activityPanel.setVisible(false);
-			activityPanel = new UpdateItemGroupPanel();
+			activityPanel = new UpdateItemGroupPanel<E>();
 			activityPanel.setBounds(0, 51, 470, 290);
 			break;
 
@@ -128,7 +128,7 @@ public class DashBoard extends JFrame {
 
 		case 14: // Update Unit
 			activityPanel.setVisible(false);
-			activityPanel = new UpdateUnitPanel();
+			activityPanel = new UpdateUnitPanel<E>();
 			activityPanel.setBounds(0, 51, 470, 290);
 			break;
 

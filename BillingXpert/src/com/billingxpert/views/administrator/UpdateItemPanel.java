@@ -6,10 +6,7 @@ import java.awt.Font;
 import java.awt.SystemColor;
 import javax.swing.JTextField;
 import javax.swing.JButton;
-import javax.swing.JList;
-import javax.swing.ListSelectionModel;
-import javax.swing.border.LineBorder;
-import java.awt.Color;
+
 
 public class UpdateItemPanel extends JPanel {
 
