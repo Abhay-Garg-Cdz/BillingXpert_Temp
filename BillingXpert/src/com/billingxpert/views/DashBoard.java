@@ -7,7 +7,6 @@ import com.billingxpert.views.administrator.*;
 import com.billingxpert.views.transactions.*;
 import com.billingxpert.views.display.*;
 import com.billingxpert.views.payments.*;
-import com.billingxpert.views.exports.*;
 
 import java.awt.SystemColor;
 
@@ -66,58 +65,22 @@ public class DashBoard extends JFrame {
 //			activityPanel.setBounds(0, 51, 1030, 660);
 			break;
 
-		case 4: // Add Account Group
-			activityPanel.setVisible(false);
-			activityPanel = new AddAccountGroupPanel();
-			activityPanel.setBounds(0, 51, 470, 290);
-			break;
-
-		case 5: // Update Account Group
-			activityPanel.setVisible(false);
-			activityPanel = new UpdateAccountGroupPanel<E>();
-			activityPanel.setBounds(0, 51, 470, 290);
-			break;
-
-		case 6: // List Account Group
-			activityPanel.setVisible(false);
-//			activityPanel = new ListAccountGroupPanel();
-			activityPanel.setBounds(0, 51, 470, 290);
-			break;
-
 		case 7: // Add Item
 			activityPanel.setVisible(false);
 			activityPanel = new AddItemPanel();
-			activityPanel.setBounds(0, 51, 1030, 660);
+			activityPanel.setBounds(0, 51, 588, 412);
 			break;
 
 		case 8: // Update Item
 			activityPanel.setVisible(false);
 			activityPanel = new UpdateItemPanel();
-			activityPanel.setBounds(0, 51, 1030, 660);
+			activityPanel.setBounds(0, 51, 588, 412);
 			break;
 
 		case 9: // List Item
 			activityPanel.setVisible(false);
 //			activityPanel = new ListItemPanel();
-//			activityPanel.setBounds(0, 51, 1030, 660);
-			break;
-
-		case 10: // Add Item Group
-			activityPanel.setVisible(false);
-			activityPanel = new AddItemGroupPanel();
-			activityPanel.setBounds(0, 51, 470, 290);
-			break;
-
-		case 11: // Update Item Group
-			activityPanel.setVisible(false);
-			activityPanel = new UpdateItemGroupPanel<E>();
-			activityPanel.setBounds(0, 51, 470, 290);
-			break;
-
-		case 12: // List Item Group
-			activityPanel.setVisible(false);
-//			activityPanel = new ListItemGroupPanel();
-			activityPanel.setBounds(0, 51, 470, 290);
+//			activityPanel.setBounds(0, 51, 588, 412);
 			break;
 
 		case 13: // Add Unit
@@ -126,21 +89,10 @@ public class DashBoard extends JFrame {
 			activityPanel.setBounds(0, 51, 470, 290);
 			break;
 
-		case 14: // Update Unit
-			activityPanel.setVisible(false);
-			activityPanel = new UpdateUnitPanel<E>();
-			activityPanel.setBounds(0, 51, 470, 290);
-			break;
 
 		case 15: // List Unit
 			activityPanel.setVisible(false);
 //			activityPanel = new ListUnitPanel();
-			activityPanel.setBounds(0, 51, 470, 290);
-			break;
-
-		case 16: // Financial Year
-			activityPanel.setVisible(false);
-//			activityPanel = new FinancialYear();
 			activityPanel.setBounds(0, 51, 470, 290);
 			break;
 
@@ -179,42 +131,6 @@ public class DashBoard extends JFrame {
 //			activityPanel.setBounds(0, 51, 1030, 660);
 			break;
 
-		case 23: // Add Sales Return
-			activityPanel.setVisible(false);
-			activityPanel = new AddSalesReturnPanel();
-			activityPanel.setBounds(0, 51, 1030, 660);
-			break;
-
-		case 24: // Update Sales Return
-			activityPanel.setVisible(false);
-			activityPanel = new UpdateSalesReturnPanel();
-			activityPanel.setBounds(0, 51, 1030, 660);
-			break;
-
-		case 25: // List Sales Return
-			activityPanel.setVisible(false);
-//			activityPanel = new ListSalesReturnPanel();
-//			activityPanel.setBounds(0, 51, 1030, 660);
-			break;
-
-		case 26: // Add Purchase Return
-			activityPanel.setVisible(false);
-			activityPanel = new AddPurchaseReturnPanel();
-			activityPanel.setBounds(0, 51, 1030, 660);
-			break;
-
-		case 27: // Update Purchase Return
-			activityPanel.setVisible(false);
-			activityPanel = new UpdatePurchaseReturnPanel();
-			activityPanel.setBounds(0, 51, 1030, 660);
-			break;
-
-		case 28: // List Purchase Return
-			activityPanel.setVisible(false);
-//			activityPanel = new ListPurchaseReturnPanel();
-//			activityPanel.setBounds(0, 51, 1030, 660);
-			break;
-
 		case 29: // Add Receipt
 			activityPanel.setVisible(false);
 			activityPanel = new AddReceiptPanel();
@@ -227,11 +143,6 @@ public class DashBoard extends JFrame {
 			activityPanel.setBounds(0, 51, 1030, 660);
 			break;
 
-		case 31: // List Receipt
-			activityPanel.setVisible(false);
-//			activityPanel = new ListReceiptPanel();
-//			activityPanel.setBounds(0, 51, 1030, 660);
-			break;
 
 		case 32: // Add Payments
 			activityPanel.setVisible(false);
@@ -245,12 +156,6 @@ public class DashBoard extends JFrame {
 			activityPanel.setBounds(0, 51, 1030, 660);
 			break;
 
-		case 34: // List Payments
-			activityPanel.setVisible(false);
-//			activityPanel = new ListPaymentsPanel();
-//			activityPanel.setBounds(0, 51, 1030, 660);
-			break;
-
 		case 35: // DayBook
 			activityPanel.setVisible(false);
 			activityPanel = new DayBookPanel();
@@ -260,30 +165,6 @@ public class DashBoard extends JFrame {
 		case 36: // Ledger
 			activityPanel.setVisible(false);
 			activityPanel = new LedgerPanel();
-			activityPanel.setBounds(0, 51, 1030, 660);
-			break;
-
-		case 37: // Exports
-			activityPanel.setVisible(false);
-			activityPanel = new ExportLedgerPanel();
-			activityPanel.setBounds(0, 51, 1030, 660);
-			break;
-
-		case 38: // Exports
-			activityPanel.setVisible(false);
-			activityPanel = new StockStatusPanel();
-			activityPanel.setBounds(0, 51, 1030, 660);
-			break;
-
-		case 39: // Exports
-			activityPanel.setVisible(false);
-			activityPanel = new AccountListPanel();
-			activityPanel.setBounds(0, 51, 1030, 660);
-			break;
-
-		case 40: // Exports
-			activityPanel.setVisible(false);
-			activityPanel = new ItemListPanel();
 			activityPanel.setBounds(0, 51, 1030, 660);
 			break;
 

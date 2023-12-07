@@ -43,7 +43,6 @@ public class NavBar extends JPanel {
 		transactionsMenu();
 		paymentsMenu();
 		displayMenu();
-		exportsMenu();
 		aboutMenu();
 		this.dashBoardFrame = dashBoardFrame;
 
@@ -96,45 +95,6 @@ public class NavBar extends JPanel {
 		listAccountMenuItem.setFont(new Font("Book Antiqua", Font.BOLD, 22));
 		accountMenu.add(listAccountMenuItem);
 
-		// AccountGroup Menu
-
-		JMenu accountGroupMenu = new JMenu("Account Group");
-		accountGroupMenu.setFont(new Font("Book Antiqua", Font.BOLD, 22));
-		administrationMenu.add(accountGroupMenu);
-
-		JMenuItem addAccountGroupMenuItem = new JMenuItem("Add");
-		addAccountGroupMenuItem.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				DashBoard.showPanel(4);
-				refresher();
-
-			}
-		});
-		addAccountGroupMenuItem.setFont(new Font("Book Antiqua", Font.BOLD, 22));
-		accountGroupMenu.add(addAccountGroupMenuItem);
-
-		JMenuItem updateAccountGroupMenuItem = new JMenuItem("Update");
-		updateAccountGroupMenuItem.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				DashBoard.showPanel(5);
-				refresher();
-
-			}
-		});
-		updateAccountGroupMenuItem.setFont(new Font("Book Antiqua", Font.BOLD, 22));
-		accountGroupMenu.add(updateAccountGroupMenuItem);
-
-		JMenuItem listAccountGroupMenuItem = new JMenuItem("List");
-		listAccountGroupMenuItem.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				DashBoard.showPanel(6);
-				refresher();
-
-			}
-		});
-		listAccountGroupMenuItem.setFont(new Font("Book Antiqua", Font.BOLD, 22));
-		accountGroupMenu.add(listAccountGroupMenuItem);
-
 		// Item Menu
 
 		JMenu itemMenu = new JMenu("Item");
@@ -174,44 +134,6 @@ public class NavBar extends JPanel {
 		listItemMenuItem.setFont(new Font("Book Antiqua", Font.BOLD, 22));
 		itemMenu.add(listItemMenuItem);
 
-		// ItemGroup Menu
-		JMenu itemGroupMenu = new JMenu("Item Group");
-		itemGroupMenu.setFont(new Font("Book Antiqua", Font.BOLD, 22));
-		administrationMenu.add(itemGroupMenu);
-
-		JMenuItem addItemGroupMenuItem = new JMenuItem("Add");
-		addItemGroupMenuItem.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				DashBoard.showPanel(10);
-				refresher();
-
-			}
-		});
-		addItemGroupMenuItem.setFont(new Font("Book Antiqua", Font.BOLD, 22));
-		itemGroupMenu.add(addItemGroupMenuItem);
-
-		JMenuItem updateItemGroupMenuItem = new JMenuItem("Update");
-		updateItemGroupMenuItem.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				DashBoard.showPanel(11);
-				refresher();
-
-			}
-		});
-		updateItemGroupMenuItem.setFont(new Font("Book Antiqua", Font.BOLD, 22));
-		itemGroupMenu.add(updateItemGroupMenuItem);
-
-		JMenuItem listItemGroupMenuItem = new JMenuItem("List");
-		listItemGroupMenuItem.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				DashBoard.showPanel(12);
-				refresher();
-
-			}
-		});
-		listItemGroupMenuItem.setFont(new Font("Book Antiqua", Font.BOLD, 22));
-		itemGroupMenu.add(listItemGroupMenuItem);
-
 		// Unit Menu
 
 		JMenu unitMenu = new JMenu("Unit");
@@ -229,17 +151,6 @@ public class NavBar extends JPanel {
 		addUnitMenuItem.setFont(new Font("Book Antiqua", Font.BOLD, 22));
 		unitMenu.add(addUnitMenuItem);
 
-		JMenuItem updateUnitMenuItem = new JMenuItem("Update");
-		updateUnitMenuItem.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				DashBoard.showPanel(14);
-				refresher();
-
-			}
-		});
-		updateUnitMenuItem.setFont(new Font("Book Antiqua", Font.BOLD, 22));
-		unitMenu.add(updateUnitMenuItem);
-
 		JMenuItem listUnitMenuItem = new JMenuItem("List");
 		listUnitMenuItem.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -250,18 +161,6 @@ public class NavBar extends JPanel {
 		});
 		listUnitMenuItem.setFont(new Font("Book Antiqua", Font.BOLD, 22));
 		unitMenu.add(listUnitMenuItem);
-
-		// Financial Year Menu
-		JMenuItem financialYearMenuItem = new JMenuItem("Financial Year");
-		financialYearMenuItem.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				DashBoard.showPanel(16);
-				refresher();
-
-			}
-		});
-		financialYearMenuItem.setFont(new Font("Book Antiqua", Font.BOLD, 22));
-		administrationMenu.add(financialYearMenuItem);
 
 	}
 
@@ -274,7 +173,7 @@ public class NavBar extends JPanel {
 //				transactionsMenu.setBounds(0, 0, 55, 48);
 		mainMenuBar.add(transactionsMenu);
 
-		// Account Menu
+		// Sales Menu
 
 		JMenu salesMenu = new JMenu("Sales");
 		salesMenu.setFont(new Font("Book Antiqua", Font.BOLD, 22));
@@ -313,7 +212,7 @@ public class NavBar extends JPanel {
 		listSalesMenuItem.setFont(new Font("Book Antiqua", Font.BOLD, 22));
 		salesMenu.add(listSalesMenuItem);
 
-		// AccountGroup Menu
+		// Purchase Menu
 
 		JMenu purchaseMenu = new JMenu("Purchase");
 		purchaseMenu.setFont(new Font("Book Antiqua", Font.BOLD, 22));
@@ -351,83 +250,6 @@ public class NavBar extends JPanel {
 		});
 		listPurchaseMenuItem.setFont(new Font("Book Antiqua", Font.BOLD, 22));
 		purchaseMenu.add(listPurchaseMenuItem);
-
-		// Item Menu
-
-		JMenu salesReturnMenu = new JMenu("Sales Return");
-		salesReturnMenu.setFont(new Font("Book Antiqua", Font.BOLD, 22));
-		transactionsMenu.add(salesReturnMenu);
-
-		JMenuItem addSalesReturnMenuItem = new JMenuItem("Add");
-		addSalesReturnMenuItem.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				DashBoard.showPanel(23);
-				refresher();
-
-			}
-		});
-		addSalesReturnMenuItem.setFont(new Font("Book Antiqua", Font.BOLD, 22));
-		salesReturnMenu.add(addSalesReturnMenuItem);
-
-		JMenuItem updateSalesReturnMenuItem = new JMenuItem("Update");
-		updateSalesReturnMenuItem.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				DashBoard.showPanel(24);
-				refresher();
-
-			}
-		});
-		updateSalesReturnMenuItem.setFont(new Font("Book Antiqua", Font.BOLD, 22));
-		salesReturnMenu.add(updateSalesReturnMenuItem);
-
-		JMenuItem listSalesReturnMenuItem = new JMenuItem("List");
-		listSalesReturnMenuItem.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				DashBoard.showPanel(25);
-				refresher();
-
-			}
-		});
-		listSalesReturnMenuItem.setFont(new Font("Book Antiqua", Font.BOLD, 22));
-		salesReturnMenu.add(listSalesReturnMenuItem);
-
-		// ItemGroup Menu
-		JMenu purchaseReturnMenu = new JMenu("Purchase Return");
-		purchaseReturnMenu.setFont(new Font("Book Antiqua", Font.BOLD, 22));
-		transactionsMenu.add(purchaseReturnMenu);
-
-		JMenuItem addPurchaseReturnMenuItem = new JMenuItem("Add");
-		addPurchaseReturnMenuItem.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				DashBoard.showPanel(26);
-				refresher();
-
-			}
-		});
-		addPurchaseReturnMenuItem.setFont(new Font("Book Antiqua", Font.BOLD, 22));
-		purchaseReturnMenu.add(addPurchaseReturnMenuItem);
-
-		JMenuItem updatePurchaseReturnMenuItem = new JMenuItem("Update");
-		updatePurchaseReturnMenuItem.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				DashBoard.showPanel(27);
-				refresher();
-
-			}
-		});
-		updatePurchaseReturnMenuItem.setFont(new Font("Book Antiqua", Font.BOLD, 22));
-		purchaseReturnMenu.add(updatePurchaseReturnMenuItem);
-
-		JMenuItem listPurchaseReturnMenuItem = new JMenuItem("List");
-		listPurchaseReturnMenuItem.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				DashBoard.showPanel(28);
-				refresher();
-
-			}
-		});
-		listPurchaseReturnMenuItem.setFont(new Font("Book Antiqua", Font.BOLD, 22));
-		purchaseReturnMenu.add(listPurchaseReturnMenuItem);
 
 	}
 
@@ -468,17 +290,6 @@ public class NavBar extends JPanel {
 		updateReceiptMenuItem.setFont(new Font("Book Antiqua", Font.BOLD, 22));
 		receiptMenu.add(updateReceiptMenuItem);
 
-		JMenuItem listReceiptMenuItem = new JMenuItem("List");
-		listReceiptMenuItem.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				DashBoard.showPanel(31);
-				refresher();
-
-			}
-		});
-		listReceiptMenuItem.setFont(new Font("Book Antiqua", Font.BOLD, 22));
-		receiptMenu.add(listReceiptMenuItem);
-
 		// Payments(Inner) Menu
 
 		JMenu paymentMenu = new JMenu("Payments");
@@ -506,17 +317,6 @@ public class NavBar extends JPanel {
 		});
 		updatePaymentMenuItem.setFont(new Font("Book Antiqua", Font.BOLD, 22));
 		paymentMenu.add(updatePaymentMenuItem);
-
-		JMenuItem listPaymentMenuItem = new JMenuItem("List");
-		listPaymentMenuItem.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				DashBoard.showPanel(34);
-				refresher();
-
-			}
-		});
-		listPaymentMenuItem.setFont(new Font("Book Antiqua", Font.BOLD, 22));
-		paymentMenu.add(listPaymentMenuItem);
 
 	}
 
@@ -557,60 +357,7 @@ public class NavBar extends JPanel {
 
 	}
 
-	private void exportsMenu() {
-
-		// Exports Menu
-
-		JMenu exportsMenu = new JMenu("Exports/Print");
-		exportsMenu.setFont(new Font("Book Antiqua", Font.BOLD | Font.ITALIC, 24));
-		exportsMenu.setBounds(0, 0, 55, 48);
-		mainMenuBar.add(exportsMenu);
-
-		JMenuItem ledgerMenuItem = new JMenuItem("Ledger");
-		ledgerMenuItem.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				DashBoard.showPanel(37);
-				refresher();
-
-			}
-		});
-		ledgerMenuItem.setFont(new Font("Book Antiqua", Font.BOLD, 22));
-		exportsMenu.add(ledgerMenuItem);
-
-		JMenuItem stockStatusMenuItem = new JMenuItem("Stock Status");
-		stockStatusMenuItem.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				DashBoard.showPanel(38);
-				refresher();
-
-			}
-		});
-		stockStatusMenuItem.setFont(new Font("Book Antiqua", Font.BOLD, 22));
-		exportsMenu.add(stockStatusMenuItem);
-
-		JMenuItem accountListMenuItem = new JMenuItem("Account List");
-		accountListMenuItem.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				DashBoard.showPanel(39);
-				refresher();
-
-			}
-		});
-		accountListMenuItem.setFont(new Font("Book Antiqua", Font.BOLD, 22));
-		exportsMenu.add(accountListMenuItem);
-
-		JMenuItem itemListMenuItem = new JMenuItem("Item List");
-		itemListMenuItem.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				DashBoard.showPanel(40);
-				refresher();
-
-			}
-		});
-		itemListMenuItem.setFont(new Font("Book Antiqua", Font.BOLD, 22));
-		exportsMenu.add(itemListMenuItem);
-
-	}
+	
 
 	private void aboutMenu() {
 

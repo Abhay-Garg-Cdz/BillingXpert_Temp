@@ -2,15 +2,19 @@ package com.billingxpert.DTO;
 
 public class Unit {
 
-	public static int uniqueIdUnit;
+	public  int uniqueIdUnit;
 	private String unitName;
 
 	public Unit() {
-		super();
 	}
 
-	public Unit(String unitName) {
-		super();
+	public String getUnitName() {
+		return unitName;
+	}
+
+	public void setUnitName(String unitName) {
 		this.unitName = unitName;
 	}
+
+	
 }

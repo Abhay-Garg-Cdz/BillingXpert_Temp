@@ -18,7 +18,7 @@ public class AccountServiceImpl implements AccountService {
 		
 		//INSERT INTO `billing_xpert`.`account` (`uniqueIdAccount`, `accountName`, `accountgroup`, `openingbalance`, `address`, `gstin`, `emailId`, `phoneno`) VALUES ('82', 'Abhay Garg', 'Sundry Creditors', '5000', 'Muradnagar', ')AKH01', 'abhayagg@gmail.com', '76055133');
 		int accountId = Main.fs.uniqueIdAccount;
-		String query = "INSERT INTO `billing_xpert`.`account` (`uniqueIdAccount`, `accountName`, `accountgroup`, `openingbalance`, `address`, `gstin`, `emailId`, `phoneno`) VALUES ('"+accountId+"', '"+account.getaccountName()+"', '"+account.getAccountGroup()+"', '"+account.getOpeningBalance()+"', '"+account.getAddress()+"', '"+account.getgstin()+"', '"+account.getEmailId()+"', '"+account.getPhoneNumber()+"');";
+		String query = "INSERT INTO `billing_xpert`.`account` (`uniqueIdAccount`, `accountName`, `openingbalance`, `address`, `gstin`, `emailId`, `phoneno`) VALUES ('"+accountId+"', '"+account.getaccountName()+"', '"+account.getOpeningBalance()+"', '"+account.getAddress()+"', '"+account.getgstin()+"', '"+account.getEmailId()+"', '"+account.getPhoneNumber()+"');";
 		try {
 			Statement s = connection.createStatement();
 			s.execute(query);
