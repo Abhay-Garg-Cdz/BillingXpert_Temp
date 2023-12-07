@@ -10,6 +10,11 @@ import javax.swing.JList;
 import javax.swing.ListSelectionModel;
 import javax.swing.border.LineBorder;
 import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.math.BigInteger;
+import java.awt.event.ActionEvent;
+import com.billingxpert.DTO.Account;
+import com.billingxpert.service.AccountServiceFactory;
 
 public class AddAccountPanel<E> extends JPanel {
 
@@ -124,6 +129,26 @@ public class AddAccountPanel<E> extends JPanel {
 		add(phoneNumberTextField);
 
 		JButton saveButton = new JButton("Save");
+		saveButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Account account = new Account();
+				account.setAccountName(nameTextField.getText());
+				account.setAccountGroup(accountGroupTextField.getText());
+				account.setAddress(addressTextField.getText());
+				account.setEmailId(emailTextField.getText());
+				account.setGstin(gstinTextField.getText());
+				try {
+					account.setOpeningBalance(Double.parseDouble(openingBalanceTextField.getText()));
+				}
+				catch(NumberFormatException nexp) {
+					account.setOpeningBalance(0.0);
+				}
+				account.setPhoneNumber(phoneNumberTextField.getText());
+				AccountServiceFactory.getAccountService().addAccount(account);
+				
+				
+			}
+		});
 		saveButton.setFont(new Font("Trebuchet MS", Font.BOLD | Font.ITALIC, 25));
 		saveButton.setBounds(445, 563, 171, 44);
 		add(saveButton);

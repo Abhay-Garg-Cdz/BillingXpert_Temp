@@ -11,18 +11,24 @@ import com.billingxpert.DTO.Unit;
 public class LoaderFields implements Serializable {
 
 	private static final long serialVersionUID = 464134L;
-	private int uniqueIdAccount = Account.uniqueIdAccount;
-	private int uniqueIdAccountGroup = AccountGroup.uniqueIdAccountGroup;
-	private int uniqueIdItem = Item.uniqueIdItem;
-	private int uniqueIdItemGroup = ItemGroup.uniqueIdItemGroup;
-	private int uniqueIdUnit = Unit.uniqueIdUnit;
+	public   int uniqueIdAccount;
+	public  int uniqueIdAccountGroup;
+	public  int uniqueIdItem;
+	public  int uniqueIdItemGroup;
+	public  int uniqueIdUnit;
+	
+//	private int uniqueIdAccount = 101;
+//	private int uniqueIdAccountGroup = 01;
+//	private int uniqueIdItem = 101;
+//	private int uniqueIdItemGroup = 01;
+//	private int uniqueIdUnit = 01;
 
-	public void initiateValues(LoaderFields initiate) {
-		Account.uniqueIdAccount = initiate.uniqueIdAccount;
-		AccountGroup.uniqueIdAccountGroup = initiate.uniqueIdAccountGroup;
-		Item.uniqueIdItem = initiate.uniqueIdItem;
-		ItemGroup.uniqueIdItemGroup = initiate.uniqueIdItemGroup;
-		Unit.uniqueIdUnit = initiate.uniqueIdUnit;
-	}
+//	public void initiateValues(LoaderFields initiate) {
+//		Account.uniqueIdAccount = initiate.uniqueIdAccount;
+//		AccountGroup.uniqueIdAccountGroup = initiate.uniqueIdAccountGroup;
+//		Item.uniqueIdItem = initiate.uniqueIdItem;
+//		ItemGroup.uniqueIdItemGroup = initiate.uniqueIdItemGroup;
+//		Unit.uniqueIdUnit = initiate.uniqueIdUnit;
+//	}
 
 }

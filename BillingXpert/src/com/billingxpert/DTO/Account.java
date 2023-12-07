@@ -4,25 +4,25 @@ public class Account {
 
 	public static int uniqueIdAccount;
 	private String accountName;
-	private AccountGroup accountGroup;
+	private String accountGroup;
 	private double openingBalance;
 	private String address;
 	private String gstin;
 	private String emailId;
-	private int phoneNumber;
+	private String phoneNumber;
 
 	public Account() {
 		super();
 	}
 
-	public Account(String accountName, AccountGroup accountGroup, String gstin) {
+	public Account(String accountName, String accountGroup, String gstin) {
 		super();
 		this.accountName = accountName;
 		this.accountGroup = accountGroup;
 		this.gstin = gstin;
 	}
 
-	public Account(String accountName, AccountGroup accountGroup, double openingBalance, String gstin) {
+	public Account(String accountName, String accountGroup, double openingBalance, String gstin) {
 		super();
 		this.accountName = accountName;
 		this.accountGroup = accountGroup;
@@ -30,8 +30,8 @@ public class Account {
 		this.gstin = gstin;
 	}
 
-	public Account(String accountName, AccountGroup accountGroup, double openingBalance, String gstin, String emailId,
-			int phoneNumber) {
+	public Account(String accountName, String accountGroup, double openingBalance, String gstin, String emailId,
+			String phoneNumber) {
 		super();
 		this.accountName = accountName;
 		this.accountGroup = accountGroup;
@@ -41,8 +41,8 @@ public class Account {
 		this.phoneNumber = phoneNumber;
 	}
 
-	public Account(String accountName, AccountGroup accountGroup, double openingBalance, String address, String gstin,
-			String emailId, int phoneNumber) {
+	public Account(String accountName, String accountGroup, double openingBalance, String address, String gstin,
+			String emailId, String phoneNumber) {
 		super();
 		this.accountName = accountName;
 		this.accountGroup = accountGroup;
@@ -61,7 +61,7 @@ public class Account {
 		return accountName;
 	}
 
-	public AccountGroup getAccountGroup() {
+	public String getAccountGroup() {
 		return accountGroup;
 	}
 
@@ -81,8 +81,42 @@ public class Account {
 		return emailId;
 	}
 
-	public int getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
+
+	public static void setUniqueIdAccount(int uniqueIdAccount) {
+		Account.uniqueIdAccount = uniqueIdAccount;
+	}
+
+	public void setAccountName(String accountName) {
+		this.accountName = accountName;
+	}
+
+	public void setAccountGroup(String accountGroup) {
+		this.accountGroup = accountGroup;
+	}
+
+	public void setOpeningBalance(double openingBalance) {
+		this.openingBalance = openingBalance;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public void setGstin(String gstin) {
+		this.gstin = gstin;
+	}
+
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+	
+	
 
 }

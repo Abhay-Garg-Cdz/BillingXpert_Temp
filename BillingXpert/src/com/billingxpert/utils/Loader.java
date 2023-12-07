@@ -20,13 +20,13 @@ public class Loader {
 	}
 
 	// FOr DeSerializing Object
-	public static void deserializeFields() throws IOException, ClassNotFoundException {
+	public static LoaderFields deserializeFields() throws IOException, ClassNotFoundException {
 		FileInputStream fileInputStream = new FileInputStream("src/res/defaults/ids.loc");
 		ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
 		LoaderFields fields = (LoaderFields) objectInputStream.readObject();
 		objectInputStream.close();
-
-		fields.initiateValues(fields);
+		
+		return fields;		
 
 	}
 
