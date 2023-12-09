@@ -1,6 +1,8 @@
 package com.billingxpert.views;
 
+
 import javax.swing.JPanel;
+
 
 public class ExitDialogBox extends JPanel {
 
@@ -15,6 +17,7 @@ public class ExitDialogBox extends JPanel {
 	 */
 	public ExitDialogBox() {
 
+		
 	}
 
 }

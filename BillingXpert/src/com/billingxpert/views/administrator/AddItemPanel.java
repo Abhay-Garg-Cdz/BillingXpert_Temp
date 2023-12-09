@@ -1,11 +1,17 @@
 package com.billingxpert.views.administrator;
 
-import javax.swing.JPanel;
-import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.SystemColor;
-import javax.swing.JTextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+import com.billingxpert.DTO.Item;
+import com.billingxpert.service.ItemServiceFactory;
 
 public class AddItemPanel extends JPanel {
 
@@ -67,6 +73,17 @@ public class AddItemPanel extends JPanel {
 		add(hsnTextField);
 
 		JButton saveButton = new JButton("Save");
+		saveButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Item item = new Item();
+				item.setItemName(nameTextField.getText());
+				item.setUnit(unitTextField.getText());
+				item.setHsn(hsnTextField.getText());
+				
+				ItemServiceFactory.getItemService().addItem(item);
+				
+				}
+		});
 		saveButton.setFont(new Font("Trebuchet MS", Font.BOLD | Font.ITALIC, 25));
 		saveButton.setBounds(220, 315, 171, 44);
 		add(saveButton);

@@ -1,14 +1,32 @@
 package com.billingxpert.views;
 
+import java.awt.SystemColor;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.io.IOException;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import com.billingxpert.views.administrator.*;
-import com.billingxpert.views.transactions.*;
-import com.billingxpert.views.display.*;
-import com.billingxpert.views.payments.*;
+import com.billingxpert.main.Main;
+import com.billingxpert.utils.Loader;
+import com.billingxpert.views.administrator.AddAccountPanel;
+import com.billingxpert.views.administrator.AddItemPanel;
+import com.billingxpert.views.administrator.AddUnitPanel;
+import com.billingxpert.views.administrator.UpdateAccountPanel;
+import com.billingxpert.views.administrator.UpdateItemPanel;
+import com.billingxpert.views.display.DayBookPanel;
+import com.billingxpert.views.display.LedgerPanel;
+import com.billingxpert.views.payments.AddPaymentsPanel;
+import com.billingxpert.views.payments.AddReceiptPanel;
+import com.billingxpert.views.payments.UpdatePaymentsPanel;
+import com.billingxpert.views.payments.UpdateReceiptPanel;
+import com.billingxpert.views.transactions.AddPurchasePanel;
+import com.billingxpert.views.transactions.AddSalesPanel;
+import com.billingxpert.views.transactions.UpdatePurchasePanel;
+import com.billingxpert.views.transactions.UpdateSalesPanel;
 
-import java.awt.SystemColor;
+
 
 public class DashBoard extends JFrame {
 
@@ -22,6 +40,41 @@ public class DashBoard extends JFrame {
 	boolean sessionExists = false;
 
 	public DashBoard() {
+		addWindowListener(new WindowAdapter() {
+			@Override
+			public void windowClosed(WindowEvent e) {
+				try {
+					Loader.serializeFields(Main.fs);
+//					System.out.println("Exit...");
+					System.exit(EXIT_ON_CLOSE);
+				} catch (IOException ed) {
+					// TODO Auto-generated catch block
+					ed.printStackTrace();
+				}
+			}
+			@Override
+			public void windowDeactivated(WindowEvent e) {    // Executes when an error occurs and abortion of program
+				try {  
+					Loader.serializeFields(Main.fs);
+//					System.out.println("Exit 2...");
+					System.exit(EXIT_ON_CLOSE);
+				} catch (IOException ed) {
+					// TODO Auto-generated catch block
+					ed.printStackTrace();
+				}
+			}
+			@Override
+			public void windowClosing(WindowEvent e) {     // Executes When window is closed by user
+				try {
+					Loader.serializeFields(Main.fs);
+//					System.out.println("Exit 3...");
+					System.exit(EXIT_ON_CLOSE);
+				} catch (IOException ed) {
+					// TODO Auto-generated catch block
+					ed.printStackTrace();
+				}
+			}
+		});
 		initialize();
 	}
 
@@ -33,7 +86,7 @@ public class DashBoard extends JFrame {
 		getContentPane().setBackground(SystemColor.info);
 		setResizable(false);
 		setBounds(100, 75, 1050, 750);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		getContentPane().setLayout(null);
 
 		NavBar navbarPane = new NavBar(thisFrame);
@@ -44,6 +97,8 @@ public class DashBoard extends JFrame {
 		setVisible(true);
 
 	}
+
+	
 
 	public static <E> void showPanel(int valueFromNavbar) {
 		switch (valueFromNavbar) {
@@ -191,7 +246,7 @@ public class DashBoard extends JFrame {
 	public void adding() {
 		if (sessionExists == true) {
 			getContentPane().add(activityPanel);
-			System.out.println("Using Currently: -- " + activityPanel.getClass().getName());
+//			System.out.println("Using Currently: -- " + activityPanel.getClass().getName());
 			setVisible(true);
 		}
 	}

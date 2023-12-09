@@ -17,10 +17,14 @@ public class Main {
 		new DashBoard();
 		
 		
-		Loader.serializeFields(fs);
+		try {
+			Loader.serializeFields(Main.fs);
+			System.out.println("Exit...");
+		} catch (IOException ed) {
+			// TODO Auto-generated catch block
+			ed.printStackTrace();
+		}
 		
-		
-
 	}
 
 }
