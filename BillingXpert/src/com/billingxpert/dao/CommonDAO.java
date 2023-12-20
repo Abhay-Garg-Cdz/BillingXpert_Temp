@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class CommonDAO {
-	
+
 	public static Connection con;
 	static {
 		try {
@@ -17,7 +17,7 @@ public class CommonDAO {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public static Connection getConnection() {
 		return con;
 	}

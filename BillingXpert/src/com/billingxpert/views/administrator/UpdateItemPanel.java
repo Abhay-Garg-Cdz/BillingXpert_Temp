@@ -1,16 +1,17 @@
 package com.billingxpert.views.administrator;
 
-import javax.swing.JPanel;
-import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.SystemColor;
-import javax.swing.JTextField;
+
 import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 public class UpdateItemPanel extends JPanel {
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 36534132L;
 	private JTextField nameTextField;

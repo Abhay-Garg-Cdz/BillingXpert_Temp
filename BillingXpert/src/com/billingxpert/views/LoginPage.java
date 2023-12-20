@@ -2,12 +2,12 @@ package com.billingxpert.views;
 
 //import java.awt.BorderLayout;
 import java.awt.Container;
-import java.awt.Image;
-import javax.swing.ImageIcon;
 import java.awt.EventQueue;
 import java.awt.Font;
 //import java.awt.image.*;
+import java.awt.Image;
 
+import javax.swing.ImageIcon;
 //import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -15,12 +15,13 @@ import javax.swing.JLabel;
 import javax.swing.JPasswordField;
 //import javax.swing.SwingConstants;
 import javax.swing.JTextField;
+import javax.swing.WindowConstants;
 
 @SuppressWarnings("serial")
 public class LoginPage extends JFrame {
 
 	/**
-	 * 
+	 *
 	 */
 //	private JFrame frame;
 	private JTextField textField;
@@ -31,6 +32,7 @@ public class LoginPage extends JFrame {
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
+			@Override
 			public void run() {
 				try {
 					new LoginPage();
@@ -45,7 +47,7 @@ public class LoginPage extends JFrame {
 	 * Create the application.
 	 */
 	public LoginPage() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setSize(500, 600);
 		setResizable(false);
 		setTitle("Login");

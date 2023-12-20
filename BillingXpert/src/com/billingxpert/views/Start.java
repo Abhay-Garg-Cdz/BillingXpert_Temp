@@ -5,6 +5,7 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.WindowConstants;
 
 public class Start {
 
@@ -36,13 +37,13 @@ public class Start {
 
 	/**
 	 * Initialize the contents of the frame.
-	 * 
+	 *
 	 * @throws InterruptedException
 	 */
 	private void initialize() {
 		frameStart = new JFrame();
 		frameStart.setBounds(100, 100, 412, 353);
-		frameStart.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		frameStart.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
 		JLabel imageLabel = new JLabel();
 		imageLabel.setBounds(144, 27, 203, 178);

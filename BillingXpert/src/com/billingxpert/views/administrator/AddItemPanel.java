@@ -11,12 +11,14 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import com.billingxpert.DTO.Item;
-import com.billingxpert.service.ItemServiceFactory;
+import com.billingxpert.main.Main;
+
+import com.billingxpert.service.QueryServiceFactory;
 
 public class AddItemPanel extends JPanel {
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 354132L;
 	private JTextField nameTextField;
@@ -74,14 +76,19 @@ public class AddItemPanel extends JPanel {
 
 		JButton saveButton = new JButton("Save");
 		saveButton.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				Item item = new Item();
 				item.setItemName(nameTextField.getText());
 				item.setUnit(unitTextField.getText());
 				item.setHsn(hsnTextField.getText());
+
+				//INSERT INTO `billing_xpert`.`item` (`uniqueIdItem`, `itemName`, `unit`, `hsn`) VALUES ('101', '1 Ltr', 'Pcs.', '5432');
 				
-				ItemServiceFactory.getItemService().addItem(item);
-				
+				String query = "INSERT INTO `billing_xpert`.`item` (`uniqueIdItem`, `itemName`, `unit`, `hsn`) VALUES ('"+Main.fs.uniqueIdItem+"', '"+item.getItemName()+"', '"+item.getUnit()+"', '"+item.getHsn()+"'); ";
+				Main.fs.uniqueIdItem++;
+				QueryServiceFactory.getQueryService().insertQuery(query);
+
 				}
 		});
 		saveButton.setFont(new Font("Trebuchet MS", Font.BOLD | Font.ITALIC, 25));

@@ -1,10 +1,10 @@
 package com.billingxpert.utils;
 
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.ObjectOutputStream;
-import java.io.FileInputStream;
 import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 
 import com.billingxpert.dao.LoaderFields;
 
@@ -25,8 +25,8 @@ public class Loader {
 		ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
 		LoaderFields fields = (LoaderFields) objectInputStream.readObject();
 		objectInputStream.close();
-		
-		return fields;		
+
+		return fields;
 
 	}
 

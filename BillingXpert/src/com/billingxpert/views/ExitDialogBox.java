@@ -9,7 +9,7 @@ public class ExitDialogBox extends JPanel {
 	private static final long serialVersionUID = 92482702L;
 
 	/**
-	 * 
+	 *
 	 */
 
 	/**
@@ -17,7 +17,7 @@ public class ExitDialogBox extends JPanel {
 	 */
 	public ExitDialogBox() {
 
-		
+
 	}
 
 }

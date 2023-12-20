@@ -1,21 +1,22 @@
 package com.billingxpert.views;
 
-import javax.swing.JPanel;
-import javax.swing.JMenu;
+import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JPanel;
 import javax.swing.border.CompoundBorder;
-import javax.swing.border.LineBorder;
-import java.awt.Color;
 import javax.swing.border.EtchedBorder;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import javax.swing.border.LineBorder;
 
 public class NavBar extends JPanel {
 
 	/**
-	 * 
+	 *
 	 */
 	DashBoard dashBoardFrame;
 	private static final long serialVersionUID = 198956L;
@@ -65,6 +66,7 @@ public class NavBar extends JPanel {
 
 		JMenuItem addAccountMenuItem = new JMenuItem("Add");
 		addAccountMenuItem.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				DashBoard.showPanel(1);
 				refresher();
@@ -75,6 +77,7 @@ public class NavBar extends JPanel {
 
 		JMenuItem updateAccountMenuItem = new JMenuItem("Update");
 		updateAccountMenuItem.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				DashBoard.showPanel(2);
 				refresher();
@@ -86,6 +89,7 @@ public class NavBar extends JPanel {
 
 		JMenuItem listAccountMenuItem = new JMenuItem("List");
 		listAccountMenuItem.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				DashBoard.showPanel(3);
 				refresher();
@@ -103,6 +107,7 @@ public class NavBar extends JPanel {
 
 		JMenuItem addItemMenuItem = new JMenuItem("Add");
 		addItemMenuItem.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				DashBoard.showPanel(7);
 				refresher();
@@ -114,6 +119,7 @@ public class NavBar extends JPanel {
 
 		JMenuItem updateItemMenuItem = new JMenuItem("Update");
 		updateItemMenuItem.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				DashBoard.showPanel(8);
 				refresher();
@@ -125,6 +131,7 @@ public class NavBar extends JPanel {
 
 		JMenuItem listItemMenuItem = new JMenuItem("List");
 		listItemMenuItem.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				DashBoard.showPanel(9);
 				refresher();
@@ -142,6 +149,7 @@ public class NavBar extends JPanel {
 
 		JMenuItem addUnitMenuItem = new JMenuItem("Add");
 		addUnitMenuItem.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				DashBoard.showPanel(13);
 				refresher();
@@ -153,6 +161,7 @@ public class NavBar extends JPanel {
 
 		JMenuItem listUnitMenuItem = new JMenuItem("List");
 		listUnitMenuItem.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				DashBoard.showPanel(15);
 				refresher();
@@ -181,6 +190,7 @@ public class NavBar extends JPanel {
 
 		JMenuItem addSalesMenuItem = new JMenuItem("Add");
 		addSalesMenuItem.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				DashBoard.showPanel(17);
 				refresher();
@@ -192,6 +202,7 @@ public class NavBar extends JPanel {
 
 		JMenuItem updateSalesMenuItem = new JMenuItem("Update");
 		updateSalesMenuItem.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				DashBoard.showPanel(18);
 				refresher();
@@ -203,6 +214,7 @@ public class NavBar extends JPanel {
 
 		JMenuItem listSalesMenuItem = new JMenuItem("List");
 		listSalesMenuItem.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				DashBoard.showPanel(19);
 				refresher();
@@ -220,6 +232,7 @@ public class NavBar extends JPanel {
 
 		JMenuItem addPurchaseMenuItem = new JMenuItem("Add");
 		addPurchaseMenuItem.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				DashBoard.showPanel(20);
 				refresher();
@@ -231,6 +244,7 @@ public class NavBar extends JPanel {
 
 		JMenuItem updatePurchaseMenuItem = new JMenuItem("Update");
 		updatePurchaseMenuItem.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				DashBoard.showPanel(21);
 				refresher();
@@ -242,6 +256,7 @@ public class NavBar extends JPanel {
 
 		JMenuItem listPurchaseMenuItem = new JMenuItem("List");
 		listPurchaseMenuItem.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				DashBoard.showPanel(22);
 				refresher();
@@ -270,6 +285,7 @@ public class NavBar extends JPanel {
 
 		JMenuItem addreceiptMenuItem = new JMenuItem("Add");
 		addreceiptMenuItem.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				DashBoard.showPanel(29);
 				refresher();
@@ -281,6 +297,7 @@ public class NavBar extends JPanel {
 
 		JMenuItem updateReceiptMenuItem = new JMenuItem("Update");
 		updateReceiptMenuItem.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				DashBoard.showPanel(30);
 				refresher();
@@ -298,6 +315,7 @@ public class NavBar extends JPanel {
 
 		JMenuItem addPaymentMenuItem = new JMenuItem("Add");
 		addPaymentMenuItem.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				DashBoard.showPanel(32);
 				refresher();
@@ -309,6 +327,7 @@ public class NavBar extends JPanel {
 
 		JMenuItem updatePaymentMenuItem = new JMenuItem("Update");
 		updatePaymentMenuItem.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				DashBoard.showPanel(33);
 				refresher();
@@ -331,6 +350,7 @@ public class NavBar extends JPanel {
 
 		JMenuItem dayBookMenuItem = new JMenuItem("Day Book");
 		dayBookMenuItem.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				DashBoard.showPanel(35);
 				refresher();
@@ -342,6 +362,7 @@ public class NavBar extends JPanel {
 
 		JMenuItem ledgerMenuItem = new JMenuItem("Ledger");
 		ledgerMenuItem.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				DashBoard.showPanel(36);
 				refresher();
@@ -357,7 +378,7 @@ public class NavBar extends JPanel {
 
 	}
 
-	
+
 
 	private void aboutMenu() {
 
@@ -370,6 +391,7 @@ public class NavBar extends JPanel {
 
 		JMenuItem helpMenuItem = new JMenuItem("Help");
 		helpMenuItem.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				DashBoard.showPanel(41);
 				refresher();
@@ -381,6 +403,7 @@ public class NavBar extends JPanel {
 
 		JMenuItem aboutMenuItem = new JMenuItem("About");
 		aboutMenuItem.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				DashBoard.showPanel(42);
 				refresher();
@@ -392,6 +415,7 @@ public class NavBar extends JPanel {
 
 		JMenuItem exitMenuItem = new JMenuItem("Exit");
 		exitMenuItem.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				DashBoard.showPanel(43);
 				refresher();
@@ -411,8 +435,8 @@ public class NavBar extends JPanel {
 	}
 
 //	public void actionPerformed(ActionEvent e) {
-//		
+//
 //		if(e.getActionCommand().equals(""))
-//		
+//
 //	}
 }

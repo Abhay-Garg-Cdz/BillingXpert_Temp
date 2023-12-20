@@ -1,24 +1,27 @@
 package com.billingxpert.views.administrator;
 
-import javax.swing.JPanel;
-import javax.swing.JLabel;
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.SystemColor;
-import javax.swing.JTextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JList;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
 import javax.swing.border.LineBorder;
-import java.awt.Color;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+
 import com.billingxpert.DTO.Account;
-import com.billingxpert.service.AccountServiceFactory;
+import com.billingxpert.main.Main;
+import com.billingxpert.service.QueryServiceFactory;
 
 public class AddAccountPanel<E> extends JPanel {
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 42122L;
 	private JTextField nameTextField;
@@ -116,6 +119,7 @@ public class AddAccountPanel<E> extends JPanel {
 
 		JButton saveButton = new JButton("Save");
 		saveButton.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				Account account = new Account();
 				account.setAccountName(nameTextField.getText());
@@ -129,9 +133,14 @@ public class AddAccountPanel<E> extends JPanel {
 					account.setOpeningBalance(0.0);
 				}
 				account.setPhoneNumber(phoneNumberTextField.getText());
-				AccountServiceFactory.getAccountService().addAccount(account);
-				 
 				
+				//INSERT INTO `billing_xpert`.`account` (`uniqueIdAccount`, `accountName`, `accountgroup`, `openingbalance`, `address`, `gstin`, `emailId`, `phoneno`) VALUES ('82', 'Abhay Garg', 'Sundry Creditors', '5000', 'Muradnagar', ')AKH01', 'abhayagg@gmail.com', '76055133');
+				
+				String query = "INSERT INTO `billing_xpert`.`account` (`uniqueIdAccount`, `accountName`, `openingbalance`, `address`, `gstin`, `emailId`, `phoneno`) VALUES ('"+Main.fs.uniqueIdAccount+"', '"+account.getaccountName()+"', '"+account.getOpeningBalance()+"', '"+account.getAddress()+"', '"+account.getgstin()+"', '"+account.getEmailId()+"', '"+account.getPhoneNumber()+"');";
+				Main.fs.uniqueIdAccount++;
+				QueryServiceFactory.getQueryService().insertQuery(query);
+
+
 			}
 		});
 		saveButton.setFont(new Font("Trebuchet MS", Font.BOLD | Font.ITALIC, 25));

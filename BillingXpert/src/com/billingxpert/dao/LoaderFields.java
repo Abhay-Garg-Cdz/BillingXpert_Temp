@@ -8,7 +8,7 @@ public class LoaderFields implements Serializable {
 	public  int uniqueIdAccount;
 	public  int uniqueIdItem;
 	public  int uniqueIdUnit;
-	
+
 
 
 }

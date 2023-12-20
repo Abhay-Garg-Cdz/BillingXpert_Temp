@@ -11,7 +11,7 @@ public class Account {
 	private String phoneNumber;
 
 	public Account() {
-		
+
 	}
 
 	public int getuniqueIdAccount() {
@@ -22,7 +22,7 @@ public class Account {
 		return accountName;
 	}
 
-	
+
 	public double getOpeningBalance() {
 		return openingBalance;
 	}
@@ -48,7 +48,7 @@ public class Account {
 		this.accountName = accountName;
 	}
 
-	
+
 
 	public void setOpeningBalance(double openingBalance) {
 		this.openingBalance = openingBalance;
@@ -69,7 +69,7 @@ public class Account {
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-	
-	
+
+
 
 }

@@ -31,7 +31,7 @@ import com.billingxpert.views.transactions.UpdateSalesPanel;
 public class DashBoard extends JFrame {
 
 	/**
-		 * 
+		 *
 		 */
 	private static final long serialVersionUID = 187452L;
 	// private static JFrame frameDashBoard = new JFrame();
@@ -41,28 +41,28 @@ public class DashBoard extends JFrame {
 
 	public DashBoard() {
 		addWindowListener(new WindowAdapter() {
-			@Override
-			public void windowClosed(WindowEvent e) {
-				try {
-					Loader.serializeFields(Main.fs);
-//					System.out.println("Exit...");
-					System.exit(EXIT_ON_CLOSE);
-				} catch (IOException ed) {
-					// TODO Auto-generated catch block
-					ed.printStackTrace();
-				}
-			}
-			@Override
-			public void windowDeactivated(WindowEvent e) {    // Executes when an error occurs and abortion of program
-				try {  
-					Loader.serializeFields(Main.fs);
-//					System.out.println("Exit 2...");
-					System.exit(EXIT_ON_CLOSE);
-				} catch (IOException ed) {
-					// TODO Auto-generated catch block
-					ed.printStackTrace();
-				}
-			}
+//			@Override
+//			public void windowClosed(WindowEvent e) {
+//				try {
+//					Loader.serializeFields(Main.fs);
+////					System.out.println("Exit...");
+//					System.exit(EXIT_ON_CLOSE);
+//				} catch (IOException ed) {
+//					// TODO Auto-generated catch block
+//					ed.printStackTrace();
+//				}
+//			}
+//			@Override
+//			public void windowDeactivated(WindowEvent e) {    // Executes when an error occurs and abortion of program
+//				try {
+//					Loader.serializeFields(Main.fs);
+////					System.out.println("Exit 2...");
+//					System.exit(EXIT_ON_CLOSE);
+//				} catch (IOException ed) {
+//					// TODO Auto-generated catch block
+//					ed.printStackTrace();
+//				}
+//			}
 			@Override
 			public void windowClosing(WindowEvent e) {     // Executes When window is closed by user
 				try {
@@ -98,7 +98,7 @@ public class DashBoard extends JFrame {
 
 	}
 
-	
+
 
 	public static <E> void showPanel(int valueFromNavbar) {
 		switch (valueFromNavbar) {
@@ -244,7 +244,7 @@ public class DashBoard extends JFrame {
 	}
 
 	public void adding() {
-		if (sessionExists == true) {
+		if (sessionExists) {
 			getContentPane().add(activityPanel);
 //			System.out.println("Using Currently: -- " + activityPanel.getClass().getName());
 			setVisible(true);

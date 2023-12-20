@@ -9,6 +9,12 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.LineBorder;
 
+import com.billingxpert.main.Main;
+import com.billingxpert.service.QueryServiceFactory;
+
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
 public class AddUnitPanel extends JPanel {
 
 	// bound -- 470*290
@@ -40,6 +46,15 @@ public class AddUnitPanel extends JPanel {
 		nameTextField.setColumns(10);
 
 		JButton addButton = new JButton("Add");
+		addButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				//INSERT INTO `billing_xpert`.`unit` (`uniqueIdUnit`, `unitName`) VALUES ('101', '1 Ltr');
+				String query = "INSERT INTO `billing_xpert`.`unit` (`uniqueIdUnit`, `unitName`) VALUES ('"+Main.fs.uniqueIdUnit+"', '"+nameTextField.getText()+"');";
+				Main.fs.uniqueIdUnit++;
+				QueryServiceFactory.getQueryService().insertQuery(query);
+			}
+		});
 		addButton.setFont(new Font("Trebuchet MS", Font.BOLD | Font.ITALIC, 25));
 		addButton.setBounds(146, 216, 171, 44);
 		add(addButton);

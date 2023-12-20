@@ -1,20 +1,21 @@
 package com.billingxpert.views.administrator;
 
-import javax.swing.JPanel;
-import javax.swing.JLabel;
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.SystemColor;
-import javax.swing.JTextField;
+
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JList;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
 import javax.swing.border.LineBorder;
-import java.awt.Color;
 
 public class UpdateAccountPanel<E> extends JPanel {
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 35452635L;
 	private JTextField nameTextField;
